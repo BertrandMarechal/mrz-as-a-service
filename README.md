@@ -10,11 +10,13 @@ serverless create -t aws-nodejs -p lambda
 ## Create a bucket
 
 ```bat
-aws s3api create-bucket --bucket mrz-a-a-s --profile me
+aws s3api create-bucket --bucket mrz-read-as-a-service
 ```
 
-## Put an object
+## Utils
 
 ```bat
-node lambda\utils\put-object.js
+ts-node utils\put-object.ts
+ts-node utils\run-rekognition.ts
+ts-node utils\analyze-rekognition.ts
 ```
